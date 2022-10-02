@@ -3,7 +3,7 @@ import { Text } from 'react-native'
 
 const Home = () => {
   return (
-    <Text>Details make me fee lovely good</Text>
+    <Text>Home page</Text>
   )
 }
 
