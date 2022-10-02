@@ -18,18 +18,16 @@ const theme = {
 
 const App = () => {
   const [loaded] = useFonts({
-    Roboto: require('./assets/fonts/Roboto-Regular.ttf'),
-    RobotoMedium: require('./assets/fonts/Roboto-Medium.ttf'),
-    RobotoBold: require('./assets/fonts/Roboto-Bold.ttf'),
+    
   });
   
   return (
     <NavigationContainer theme = {theme}>
       <Stack.Navigator screenOptions = {{ headerShown: false }}
       initialRouteName="Home">
-        <Stack.screen name="Home" component={Home}/>
+        <Stack.Screen name="Home" component={Home}/>
 
-        <Stack.screen name="Details" component={Details} />
+        <Stack.Screen name="Details" component={Details} />
       </Stack.Navigator>
     </NavigationContainer>
   );
