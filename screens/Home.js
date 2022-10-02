@@ -1,8 +1,5 @@
 import React from 'react'
-import { Text } from 'react-native'
-import { SafeAreaView } from 'react-native';
-import { FlatList } from 'react-native-gesture-handler';
-import { View } from 'react-native-web';
+import { FlatList, Text, View, SafeAreaView } from 'react-native'
 import { FocusStatusBar } from '../components'
 import { COLORS, NFTData } from '../constants';
 
@@ -13,7 +10,7 @@ const Home = () => {
       <View style={ { flex: 1} } >
         <View style= { { zIndex: 0 } } >
           <FlatList data={NFTData} 
-          renderItem={({item}) => <Text>{item.title}</Text>}
+          renderItem={({item}) => <Text>{item.name}</Text>}
           />
         </View>
       </View>
