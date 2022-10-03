@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text, Image } from 'react-native'
 import React from 'react'
 import { COLORS, SHADOWS, SIZES } from '../constants'
 
@@ -14,6 +14,9 @@ const NFTCard = ({ data }) => {
         ...SHADOWS.dark
       }
     }>
+      <View style = { { width: "100%", height: 250 } }>
+        <Image source={data.image} style={{ width: "100%", height: "100%", borderRadius: SIZES.font }} />
+      </View>
       <Text>NFTCard</Text>
     </View>
   )
