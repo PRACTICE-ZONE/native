@@ -1,7 +1,7 @@
 import { View, Text, Image } from 'react-native'
 import React from 'react'
 import { assets, COLORS, SHADOWS, SIZES } from '../constants'
-import CircleButton from './CircleButton'
+import CircleButton from './Button'
 
 const NFTCard = ({ data }) => {
 
