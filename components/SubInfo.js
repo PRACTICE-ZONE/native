@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text, Image } from 'react-native'
 import React from 'react'
 import { assets, SIZES } from '../constants'
 
@@ -18,11 +18,17 @@ export const EthPrice = () => {
     )
 }
 
-export const ImageCmp = () => {
+export const ImageCmp = ({ imgUrl, index }) => {
     return (
-      <View>
-        <Text>SubInfo</Text>
-      </View>
+      <Image 
+      source={imgUrl}
+      resizeMode='contain'
+      style={{
+          width:40,
+          height: 40,
+          marginLeft: index === 0 ? 0: SIZES.font,
+        }}
+        />
     )
 }
 
@@ -33,7 +39,9 @@ export const People = () => {
           flexDirection: 'row',
         }
       }>
-        {[assets.person02, assets.person03, assets.person04].map((item, index) => {]}
+        {
+        [assets.person02, assets.person03, assets.person04].map((item, index) => <ImageCmp key={index} source={item} />)
+        }
       </View>
     )
 }
