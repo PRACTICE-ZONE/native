@@ -40,7 +40,8 @@ export const People = () => {
         }
       }>
         {
-        [assets.person02, assets.person03, assets.person04].map((item, index) => <ImageCmp key={index} source={item} />)
+        [assets.person02, assets.person03, assets.person04].map((imgUrl, index) => 
+        <ImageCmp imgUrl={imgUrl} index={index} key={`People-${index}`} />)
         }
       </View>
     )
