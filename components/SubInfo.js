@@ -32,3 +32,23 @@ export const People = () => {
       </View>
     )
 }
+
+export const EndDate = () => {
+  return(
+    <View>
+      <Text>
+        EndDate
+      </Text>
+    </View>
+  )
+}
+
+export const SubInfo = () => {
+  return(
+    <View>
+      <Text>
+        EndDate
+      </Text>
+    </View>
+  )
+}
