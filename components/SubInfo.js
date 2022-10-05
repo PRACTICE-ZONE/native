@@ -1,6 +1,6 @@
 import { View, Text, Image } from 'react-native'
 import React from 'react'
-import { assets, SIZES } from '../constants'
+import { assets, COLORS, FONTS, SHADOWS, SIZES } from '../constants'
 
 export const NFTTitle = () => {
   return (
@@ -24,9 +24,9 @@ export const ImageCmp = ({ imgUrl, index }) => {
       source={imgUrl}
       resizeMode='contain'
       style={{
-          width:40,
-          height: 40,
-          marginLeft: index === 0 ? 0: SIZES.font,
+          width:48,
+          height: 48,
+          marginLeft: index === 0 ? 0: -SIZES.font,
         }}
         />
     )
@@ -49,9 +49,35 @@ export const People = () => {
 
 export const EndDate = () => {
   return(
-    <View>
-      <Text>
-        EndDate
+    <View style ={
+      {
+        paddingHorizontal: SIZES.font,
+        paddingVertical: SIZES.base,
+        backgroundColor: COLORS.white,
+        justifyContent: 'center',
+        alignItems: 'center',
+        ...SHADOWS.light,
+        elevation: 1,
+        maxWidth: '50%',
+      }
+    }>
+      <Text style={
+        {
+          fontFamily: FONTS.regular,
+          fontSize: SIZES.small,
+          color: COLORS.primary,
+        }
+      }>
+        Ending in
+      </Text>
+      <Text style={
+        {
+          fontFamily: FONTS.semiBold,
+          fontSize: SIZES.medium,
+          color: COLORS.primary,
+        }
+      }>
+        12h 30m 
       </Text>
     </View>
   )
@@ -68,9 +94,7 @@ export const SubInfo = () => {
     }}>
       <People />
       <EthPrice />
-      <Text>
-        EndDate
-      </Text>
+      <EndDate />
     </View>
   )
 }
