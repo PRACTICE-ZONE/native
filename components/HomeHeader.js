@@ -30,7 +30,8 @@ const HomeHeader = () => {
           }
         }
         >
-          <Image source={assets.person01} resizeMode="contain" style={{ width: 45, height: 45, borderRadius: SIZES.extraLarge }} />
+          <Image source={assets.person01} resizeMode="contain" style={{ width: "100%", height: "100%" }} />
+          <Image source={assets.badge} resizeMode="contain" style={{ width: "100%", height: "100%" }} />
         </View>
       </View>
     </View>
