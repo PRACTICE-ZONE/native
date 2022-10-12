@@ -3,7 +3,7 @@ import React from 'react'
 import { assets, COLORS, SHADOWS, SIZES } from '../constants'
 import { CircleButton } from './Button'
 import { EthPrice, NFTTitle, SubInfo } from './SubInfo'
-import { RectButton } from 'react-native-gesture-handler'
+import { RectButton } from './Button'
 
 const NFTCard = ({ data }) => {
 
@@ -43,7 +43,11 @@ const NFTCard = ({ data }) => {
           alignItems: 'center',
         }}>
           <EthPrice price = {data.price} />
-          <RectButton />
+          <RectButton
+            minwidth={12}
+            fonsSize={SIZES.font}
+            handlePress = {() => navigation.navigate("NFTDetail", { data })}
+           />
           </View>
       </View>
     </View>
