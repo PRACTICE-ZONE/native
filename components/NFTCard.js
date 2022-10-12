@@ -2,7 +2,8 @@ import { View, Text, Image } from 'react-native'
 import React from 'react'
 import { assets, COLORS, SHADOWS, SIZES } from '../constants'
 import { CircleButton } from './Button'
-import { NFTTitle, SubInfo } from './SubInfo'
+import { EthPrice, NFTTitle, SubInfo } from './SubInfo'
+import { RectButton } from 'react-native-gesture-handler'
 
 const NFTCard = ({ data }) => {
 
@@ -35,6 +36,15 @@ const NFTCard = ({ data }) => {
         titleSize={SIZES.large}
         subTitleSize = {SIZES.small}
         />
+        <View style={{
+          marginTop: SIZES.font,
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}>
+          <EthPrice price = {data.price} />
+          <RectButton />
+          </View>
       </View>
     </View>
   )
