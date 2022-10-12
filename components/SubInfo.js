@@ -25,8 +25,12 @@ export const NFTTitle = ({title, subTitle, titleSize, subTitleSize}) => {
 
 export const EthPrice = ({ price }) => {
     return (
-      <View>
-        <Text>SubInfo</Text>
+      <View style={{ flexDirection: "row", alignItems: "center" }}>
+        <Image
+        source={assets.eth}
+        resizeMode="contain"
+        style={{ width: 20, height: 20 }}
+         />
       </View>
     )
 }
