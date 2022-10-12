@@ -31,7 +31,7 @@ const HomeHeader = () => {
         }
         >
           <Image source={assets.person01} resizeMode="contain" style={{ width: "100%", height: "100%" }} />
-          <Image source={assets.badge} resizeMode="contain" style={{ width: "100%", height: "100%" }} />
+          <Image source={assets.badge} resizeMode="contain" style={{ position: 'absolute', width: 15, height: 15 }} />
         </View>
       </View>
     </View>
