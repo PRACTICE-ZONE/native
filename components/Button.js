@@ -30,7 +30,8 @@ export const RectButton = ({minWidth, fontSize, handlePress, ...props}) => {
       {
         backgroundColor: COLORS.white,
         borderRadius: SIZES.extraLarge,
-       
+        minWidth: minWidth,
+        padding: SIZES.small,
         ...props
       }
     }
