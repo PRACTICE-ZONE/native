@@ -9,4 +9,4 @@ const DetailsDesc = () => {
   )
 }
 
-export default DetailsDesc
+export default DetailsDesc;

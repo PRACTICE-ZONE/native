@@ -9,4 +9,4 @@ const DetailsBid = () => {
   )
 }
 
-export default DetailsBid
+export default DetailsBid;
