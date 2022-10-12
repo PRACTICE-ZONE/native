@@ -24,10 +24,19 @@ export const CircleButton = ({imgUrl, handlePress, ...props}) => {
   )
 }
 
-export const RectButton = () => {
+export const RectButton = ({minWidth, fontSize, handlePress, ...props}) => {
   return (
-    <View>
-      <Text>RectButton</Text>
-    </View>
+    <TouchableOpacity style = {
+      {
+        backgroundColor: COLORS.white,
+        borderRadius: SIZES.extraLarge,
+       
+        ...props
+      }
+    }
+    onPress={handlePress}
+    >
+      <Image source={imgUrl} resizeMode="contain" style={{ width: 20, height: 20 }} />
+    </TouchableOpacity>
   )
 }
