@@ -5,7 +5,20 @@ import { assets, COLORS, FONTS, SHADOWS, SIZES } from '../constants'
 export const NFTTitle = ({title, subTitle, titleSize, subTitleSize}) => {
   return (
     <View>
-      <Text>SubInfo</Text>
+      <Text style={
+        {
+          fontFamily: FONTS.semiBold,
+          fontSize: titleSize,
+          color: COLORS.primary
+        }
+      }>{title}</Text>
+        <Text style={
+        {
+          fontFamily: FONTS.regular,
+          fontSize: subTitleSize,
+          color: COLORS.primary
+        }
+      }>{subTitle}</Text>
     </View>
   )
 }
