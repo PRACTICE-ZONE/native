@@ -25,11 +25,12 @@ const HomeHeader = () => {
         <View
         style = {
           {
-            
+            width: 45,
+            height: 45,
           }
         }
         >
-
+          <Image source={assets.person01} resizeMode="contain" style={{ width: 45, height: 45, borderRadius: SIZES.extraLarge }} />
         </View>
       </View>
     </View>
