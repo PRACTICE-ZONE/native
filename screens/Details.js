@@ -13,10 +13,11 @@ const Details = ({ route, navigation }) => {
         backgroundColor="transparent"
         translucent={true}
        >
-        <Text>Button</Text>
-        <View>
+
+<Text>Details</Text>
+        {/* <View>
           <RectButton minWidth={170} fontSize={SIZES.large} {...SHADOWS.dark} />
-        </View>
+        </View> */}
       </FocusStatusBar>
     </SafeAreaView>
   )
