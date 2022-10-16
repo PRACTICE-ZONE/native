@@ -1,7 +1,7 @@
 import React from 'react'
 import { SafeAreaView, Text, View } from 'react-native'
 import { RectButton} from '../components/Button';
-import FocusStatusBar from '../components/FocusStatusBar'
+import { FocusStatusBar } from '../components'
 import { SHADOWS, SIZES } from '../constants'
 
 const Details = ({ route, navigation }) => {
@@ -12,13 +12,8 @@ const Details = ({ route, navigation }) => {
         barStyle="dark-content"
         backgroundColor="transparent"
         translucent={true}
-       >
-
-<Text>Details</Text>
-        {/* <View>
-          <RectButton minWidth={170} fontSize={SIZES.large} {...SHADOWS.dark} />
-        </View> */}
-      </FocusStatusBar>
+       />
+       <RectButton minWidth={170} fontSize={SIZES.large} {...SHADOWS} />
     </SafeAreaView>
   )
 }
