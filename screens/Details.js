@@ -1,9 +1,19 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { SafeAreaView, Text } from 'react-native'
+import FocusStatusBar from '../components/FocusStatusBar'
 
-const Details = () => {
+const Details = ({ route, navigation }) => {
   return (
-    <Text>Details</Text>
+    <SafeAreaView style={{ flex: 1 }}>
+      <FocusStatusBar
+        barStyle="dark-content"
+        backgroundColor="transparent"
+        translucent={true}
+
+       >
+
+      </FocusStatusBar>
+    </SafeAreaView>
   )
 }
 
