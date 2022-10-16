@@ -21,7 +21,7 @@ const Details = ({ route, navigation }) => {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'rgba(255, 255, 255, 0.8)',
-        zIndex: 1,
+        zIndex: 1
        }}>
          <RectButton minWidth={170} fontSize={SIZES.large} {...SHADOWS} />
        </View>
