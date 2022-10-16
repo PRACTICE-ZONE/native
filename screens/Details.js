@@ -1,10 +1,11 @@
 import React from 'react'
 import { SafeAreaView, Text, View } from 'react-native'
-import { RectButton } from 'react-native-gesture-handler'
+import { RectButton} from '../components/Button';
 import FocusStatusBar from '../components/FocusStatusBar'
 import { SHADOWS, SIZES } from '../constants'
 
 const Details = ({ route, navigation }) => {
+  const { data } = route.params;
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <FocusStatusBar
@@ -12,6 +13,7 @@ const Details = ({ route, navigation }) => {
         backgroundColor="transparent"
         translucent={true}
        >
+        <Text>Button</Text>
         <View>
           <RectButton minWidth={170} fontSize={SIZES.large} {...SHADOWS.dark} />
         </View>
