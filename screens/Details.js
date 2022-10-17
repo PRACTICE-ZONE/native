@@ -1,14 +1,22 @@
 import React from 'react'
-import { FlatList, SafeAreaView, Text, View } from 'react-native'
-import { RectButton} from '../components/Button';
+import { FlatList, Image, SafeAreaView, StatusBar, Text, View } from 'react-native'
+import { CircleButton, RectButton} from '../components/Button';
 import { DetailsBid, FocusStatusBar } from '../components'
-import { SHADOWS, SIZES } from '../constants'
+import { assets, SHADOWS, SIZES } from '../constants'
 
 const DetailsHeader = ({data, navigation}) => {
   return (
     <View style={{ width: '100%', height: 373 }}>
       <Image 
-      source = {data.Image}
+      source = {data.image}
+      resizeMode='cover'
+      style={{ width: '100%', height: '100%'}}
+      />
+      <CircleButton
+      imgUrl={assets.left}
+      handlePress= {() => navigation.goBack()}
+      left = {10}
+      top = {StatusBar.currentHeight + 10 }
       />
     </View>
   )
