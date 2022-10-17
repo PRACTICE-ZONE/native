@@ -4,6 +4,13 @@ import { RectButton} from '../components/Button';
 import { DetailsBid, FocusStatusBar } from '../components'
 import { SHADOWS, SIZES } from '../constants'
 
+const DetailsHeader = () => {
+  return (
+    <View>
+      
+    </View>
+  )
+}
 const Details = ({ route, navigation }) => {
   const { data } = route.params;
   return (
@@ -31,6 +38,11 @@ const Details = ({ route, navigation }) => {
         keyExtractor = {item => item.id}
         showsVerticalScrollIndicator={false}
         contentContainerStyle = {{ paddingBottom: SIZES.extraLarge * 3 }}
+        ListHeaderComponent = { () => (
+          <React.Fragment>
+            <DetailsHeader />
+          </React.Fragment>
+        )}
         />
     </SafeAreaView>
   )
