@@ -4,10 +4,12 @@ import { RectButton} from '../components/Button';
 import { DetailsBid, FocusStatusBar } from '../components'
 import { SHADOWS, SIZES } from '../constants'
 
-const DetailsHeader = () => {
+const DetailsHeader = ({data, navigation}) => {
   return (
-    <View>
-      
+    <View style={{ width: '100%', height: 373 }}>
+      <Image 
+      source = {data.Image}
+      />
     </View>
   )
 }
@@ -40,7 +42,7 @@ const Details = ({ route, navigation }) => {
         contentContainerStyle = {{ paddingBottom: SIZES.extraLarge * 3 }}
         ListHeaderComponent = { () => (
           <React.Fragment>
-            <DetailsHeader />
+            <DetailsHeader data={data} navigation={navigation}/>
           </React.Fragment>
         )}
         />
