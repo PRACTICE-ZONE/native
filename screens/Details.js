@@ -23,18 +23,14 @@ const Details = ({ route, navigation }) => {
         backgroundColor: 'rgba(255, 255, 255, 0.8)',
         zIndex: 1
        }}>
-         <RectButton minWidth={170} fontSize={SIZES.large} {...SHADOWS} />
+         <RectButton minWidth={170} fontSize={SIZES.large} {...SHADOWS.dark} />
        </View>
        <FlatList 
         data={data.bids}
-        renderItem = {({item}) => (<DetailsBid {...item} />)}
+        renderItem = {({item}) => <DetailsBid bid={item} />}
         keyExtractor = {item => item.id}
         showsVerticalScrollIndicator={false}
-        contentContainerStyle = {{
-          paddingVertical: SIZES.font,
-          paddingHorizontal: SIZES.padding
-        }}
-        
+        contentContainerStyle = {{ paddingBottom: SIZES.extraLarge * 3 }}
         />
     </SafeAreaView>
   )
