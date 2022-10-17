@@ -1,7 +1,7 @@
 import React from 'react'
-import { SafeAreaView, Text, View } from 'react-native'
+import { FlatList, SafeAreaView, Text, View } from 'react-native'
 import { RectButton} from '../components/Button';
-import { FocusStatusBar } from '../components'
+import { DetailsBid, FocusStatusBar } from '../components'
 import { SHADOWS, SIZES } from '../constants'
 
 const Details = ({ route, navigation }) => {
@@ -25,6 +25,17 @@ const Details = ({ route, navigation }) => {
        }}>
          <RectButton minWidth={170} fontSize={SIZES.large} {...SHADOWS} />
        </View>
+       <FlatList 
+        data={data.bids}
+        renderItem = {({item}) => (<DetailsBid {...item} />)}
+        keyExtractor = {item => item.id}
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle = {{
+          paddingVertical: SIZES.font,
+          paddingHorizontal: SIZES.padding
+        }}
+        
+        />
     </SafeAreaView>
   )
 }
