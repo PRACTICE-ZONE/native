@@ -1,11 +1,14 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import { NFTTitle } from './SubInfo';
 
-const DetailsDesc = () => {
+const DetailsDesc = ({ data }) => {
   return (
-    <View>
-      <Text>DetailsDesc</Text>
-    </View>
+    <>
+      <View>
+        <NFTTitle />
+      </View>
+    </>
   )
 }
 
