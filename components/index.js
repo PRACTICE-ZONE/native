@@ -5,5 +5,6 @@ import { CircleButton, RectButton } from "./Button";
 import { NFTTitle, EthPrice } from "./SubInfo";
 import DetailsBid from "./DetailsBid";
 import DetailsDesc from "./DetailsDesc";
+import { SubInfo } from "./SubInfo";
 
-export { FocusStatusBar, HomeHeader, NFTCard, CircleButton, RectButton, NFTTitle, EthPrice, DetailsDesc, DetailsBid };
+export { FocusStatusBar, HomeHeader, NFTCard, CircleButton, RectButton, NFTTitle, EthPrice, DetailsDesc, DetailsBid, SubInfo };

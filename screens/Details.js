@@ -1,7 +1,7 @@
 import React from 'react'
 import { FlatList, Image, SafeAreaView, StatusBar, Text, View } from 'react-native'
 import { CircleButton, RectButton} from '../components/Button';
-import { DetailsBid, FocusStatusBar } from '../components'
+import { DetailsBid, DetailsDesc, FocusStatusBar, SubInfo } from '../components'
 import { assets, SHADOWS, SIZES } from '../constants'
 
 const DetailsHeader = ({data, navigation}) => {
@@ -23,6 +23,7 @@ const DetailsHeader = ({data, navigation}) => {
       right = {10}
       top = {StatusBar.currentHeight + 10 }
       />
+      <SubInfo />
     </View>
   )
 }
@@ -56,6 +57,10 @@ const Details = ({ route, navigation }) => {
         ListHeaderComponent = { () => (
           <React.Fragment>
             <DetailsHeader data={data} navigation={navigation}/>
+            <SubInfo />
+            <View style={{ padding: SIZES.font }}>
+              <DetailsDesc data={data} />
+            </View>
           </React.Fragment>
         )}
         />
