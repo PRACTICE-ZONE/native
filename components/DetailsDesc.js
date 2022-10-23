@@ -6,7 +6,12 @@ import { SIZES } from '../constants';
 const DetailsDesc = ({ data }) => {
   return (
     <>
-      <View>
+      <View style={{
+        width: '100%',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        justifyContent: 'center',
+      }}>
         <NFTTitle
           title = {data.name}
           subTitle={data.creator}
