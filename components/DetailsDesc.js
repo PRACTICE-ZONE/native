@@ -36,8 +36,8 @@ const DetailsDesc = ({ data }) => {
             fontFamily: FONTS.regular,
             color: COLORS.secondary,
             lineHeight: SIZES.large
-          }}>{text}</Text>
-          {!showMore && '....'}
+          }}>{text} {!showMore && '....'}</Text>
+          
         </View>
       </View>
     </>
