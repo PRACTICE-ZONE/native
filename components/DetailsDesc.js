@@ -1,12 +1,19 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import { NFTTitle } from './SubInfo';
+import { EthPrice, NFTTitle } from './SubInfo';
+import { SIZES } from '../constants';
 
 const DetailsDesc = ({ data }) => {
   return (
     <>
       <View>
-        <NFTTitle />
+        <NFTTitle
+          title = {data.name}
+          subTitle={data.creator}
+          titleSize={SIZES.extraLarge}
+          subTitleSize={SIZES.large}
+         />
+         <EthPrice price={data.price} />
       </View>
     </>
   )
