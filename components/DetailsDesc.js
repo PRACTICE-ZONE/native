@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import { EthPrice, NFTTitle } from './SubInfo';
-import { SIZES } from '../constants';
+import { COLORS, FONTS, SIZES } from '../constants';
 
 const DetailsDesc = ({ data }) => {
   return (
@@ -20,8 +20,24 @@ const DetailsDesc = ({ data }) => {
          />
          <EthPrice price={data.price} />
       </View>
+      <View style={{
+        marginVertical: SIZES.extraLarge + 1.5,
+      }}>
+        <Text style={{
+          fontSize: SIZES.font,
+          fontFamily: FONTS.semiBold,
+          color: COLORS.primary
+        }}>descripto</Text>
+        <View style = { { marginTop: SIZES.base }}>
+          <Text style={{
+            fontSize: SIZES.small,
+            fontFamily: FONTS.regular,
+            color: COLORS.primary
+          }}>{data.description}</Text>
+        </View>
+      </View>
     </>
   )
 }
-
+       
 export default DetailsDesc;
