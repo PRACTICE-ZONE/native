@@ -40,7 +40,7 @@ const DetailsDesc = ({ data }) => {
 
           <Text style={{
             fontSize: SIZES.small,
-            fontFamily: FONTS.semiBold,
+            fontFamily: FONTS.bold,
             color: COLORS.primary,
           }}
             onPress={() => {

@@ -1,10 +1,14 @@
-import { View, Text } from 'react-native'
+import { View, Text, Image } from 'react-native'
 import React from 'react'
 
-const DetailsBid = () => {
+const DetailsBid = ({ bid }) => {
   return (
     <View>
-      <Text>DetailsBid</Text>
+      <Image
+        source={bid.image}
+        resizeMode='contain'
+        style={{ width: 50, height: 50 }}
+      />
     </View>
   )
 }

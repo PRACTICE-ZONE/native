@@ -2,7 +2,7 @@ import React from 'react'
 import { FlatList, Image, SafeAreaView, StatusBar, Text, View } from 'react-native'
 import { CircleButton, RectButton} from '../components/Button';
 import { DetailsBid, DetailsDesc, FocusStatusBar, SubInfo } from '../components'
-import { assets, SHADOWS, SIZES } from '../constants'
+import { assets, COLORS, FONTS, SHADOWS, SIZES } from '../constants'
 
 const DetailsHeader = ({data, navigation}) => {
   return (
@@ -60,6 +60,17 @@ const Details = ({ route, navigation }) => {
             <SubInfo />
             <View style={{ padding: SIZES.font }}>
               <DetailsDesc data={data} />
+              { data.bids.length > 0 && (
+                <Text
+                style={{
+                  fontSize: SIZES.font,
+                  fontFamily: FONTS.bold,
+                  color: COLORS.primary,
+                }}
+                >
+                  CurrentBid: {data.bids[data.bids.length - 1].bid}
+                </Text>
+              )}
             </View>
           </React.Fragment>
         )}
