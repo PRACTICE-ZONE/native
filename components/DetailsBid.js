@@ -1,5 +1,6 @@
 import { View, Text, Image } from 'react-native'
 import React from 'react'
+import { COLORS, FONTS, SIZES } from '../constants';
 
 const DetailsBid = ({ bid }) => {
   return (
@@ -10,7 +11,13 @@ const DetailsBid = ({ bid }) => {
         style={{ width: 50, height: 50 }}
       />
       <View>
-        <Text>Bid placed by {bid.name}</Text>
+        <Text
+          style={{
+            fontSize: SIZES.small,
+            fontFamily: FONTS.bold,
+            color: COLORS.primary
+          }}
+        >Bid placed by {bid.name}</Text>
       </View>
     </View>
   )
