@@ -42,7 +42,19 @@ const DetailsDesc = ({ data }) => {
             fontSize: SIZES.small,
             fontFamily: FONTS.semiBold,
             color: COLORS.primary,
-          }}></Text>
+          }}
+            onPress={() => {
+              if(!showMore) {
+              setShowMore(!showMore);
+              setText(data.description);
+              } else {
+                setShowMore(!showMore);
+                setText(data.description.slice(0, 100));
+              }
+            }}
+          >
+            {showMore ? 'show less' : 'show more'}
+          </Text>
           </Text>
           
         </View>
