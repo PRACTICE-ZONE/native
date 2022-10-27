@@ -36,7 +36,14 @@ const DetailsDesc = ({ data }) => {
             fontFamily: FONTS.regular,
             color: COLORS.secondary,
             lineHeight: SIZES.large
-          }}>{text} {!showMore && '....'}</Text>
+          }}>{text} {!showMore && '....'}
+
+          <Text style={{
+            fontSize: SIZES.small,
+            fontFamily: FONTS.semiBold,
+            color: COLORS.primary,
+          }}></Text>
+          </Text>
           
         </View>
       </View>
