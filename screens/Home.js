@@ -4,7 +4,7 @@ import { FocusStatusBar, HomeHeader, NFTCard } from '../components'
 import { COLORS, NFTData } from '../constants';
 
 const Home = () => {
-  const [nftData, setNftData] = useState()
+  const [nftData, setNftData] = useState(NFTData)
   return (
     <SafeAreaView style={ { flex: 1} }>
       <FocusStatusBar background={COLORS.primary} />
