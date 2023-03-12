@@ -5,7 +5,17 @@ import { EthPrice } from './SubInfo';
 
 const DetailsBid = ({ bid }) => {
   return (
-    <View>
+    <View style={{
+      width: '100%',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      paddingHorizontal: SIZES.font,
+      paddingVertical: SIZES.small,
+      backgroundColor: COLORS.white,
+      borderRadius: SIZES.radius,
+      marginBottom: SIZES.small
+    }}>
       <Image
         source={bid.image}
         resizeMode='contain'
@@ -13,12 +23,12 @@ const DetailsBid = ({ bid }) => {
       />
       <View>
         <Text
-          style={{
-            fontSize: SIZES.small,
-            fontFamily: FONTS.semiBold,
-            color: COLORS.primary
-          }}
-        >Bid placed by {bid.name}
+          
+        >Bid placed by <Text style={{
+          fontSize: SIZES.large,
+          fontFamily: FONTS.semiBold,
+          color: COLORS.primary
+        }}>{bid.name}</Text>
         </Text>
 
         <Text
