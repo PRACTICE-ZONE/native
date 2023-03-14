@@ -5,6 +5,12 @@ import { COLORS, NFTData } from '../constants';
 
 const Home = () => {
   const [nftData, setNftData] = useState(NFTData)
+
+  const handleSearch = (value) => {
+    if(!value.length) return setNftData(NFTData)
+    const filteredDate = NFTDAta.filter(item => item.name
+      .toLowerCase().includes(value.toLowerCase()))
+  }
   return (
     <SafeAreaView style={ { flex: 1} }>
       <FocusStatusBar background={COLORS.primary} />
