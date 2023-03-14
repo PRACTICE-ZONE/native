@@ -8,7 +8,7 @@ const Home = ({onSearch}) => {
 
   const handleSearch = (value) => {
     if(!value.length) return setNftData(NFTData)
-    const filteredData = NFTDAta.filter(item => item.name
+    const filteredData = NFTData.filter(item => item.name
       .toLowerCase().includes(value.toLowerCase()))
 
       if(filteredData.length) {
@@ -22,7 +22,7 @@ const Home = ({onSearch}) => {
       <FocusStatusBar background={COLORS.primary} />
       <View style={ { flex: 1} } >
         <View style= { { zIndex: 0 } } >
-          <FlatList data={NFTData} 
+          <FlatList data={nftData} 
           renderItem={({item}) => <NFTCard data={item} /> }
           keyExtractor={item => item.id}
           showsVerticalScrollIndicator={false}
