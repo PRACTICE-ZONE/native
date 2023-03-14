@@ -8,8 +8,14 @@ const Home = () => {
 
   const handleSearch = (value) => {
     if(!value.length) return setNftData(NFTData)
-    const filteredDate = NFTDAta.filter(item => item.name
+    const filteredData = NFTDAta.filter(item => item.name
       .toLowerCase().includes(value.toLowerCase()))
+
+      if(filteredData.length) {
+        setNftData(filteredData)
+      } else {
+        setNftData(NFTData);
+      }
   }
   return (
     <SafeAreaView style={ { flex: 1} }>
